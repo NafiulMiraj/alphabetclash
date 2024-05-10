@@ -13,7 +13,7 @@
 <body class=" font-poppins">
     <main class=" min-h-screen bg-[#010313] bg-[url(asset/images/background.png)] bg-no-repeat bg-center ">
 <!-- home screen -->
-    <section class="home min-h-screen text-white flex justify-center items-center hidden ">
+    <section id="home-screen" class=" min-h-screen text-white flex justify-center items-center ">
        <div class="flex flex-col items-center gap-10">
         <h1 class="text-7xl font-anton uppercase">
             Alphabet Clash
@@ -21,23 +21,29 @@
         <p>
             Let's do keyboard Jujutsu: Press "Enter" to play
         </p>
-        <button class="btn bg-white text-black">
+        <button onclick="play()" class="btn bg-white text-black">
             Play Now..
         </button>
        </div>
 
     </section>
     <!-- play ground -->
-    <section class="play-ground">
+    <section id="play-ground" class=" hidden">
         <!-- playground container  -->
-        <div>
+        <div  class="flex flex-col ites-center gap-20 pt-20">
             <!-- playground screen -->
             <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
-                <div class="">
-                    <p class="bg-[#2F2941]">
+                <div class=" flex justify-center">
+                    <p class="bg-[#2F2941] px-6 pb-4 rounded-b-xl text-white ">
                         Don't watch keyboard  while playing... 
                     </p>
+                 
                 </div>
+                <div class="flex justify-center items-center h-full ">
+                    <p class="text-black text-9xl ">
+                        Y
+                    </p>
+                  </div>
             </div>
             <!-- keyboard start -->
             <div>
@@ -78,7 +84,7 @@
   
               <!-- keyboard end -->
             <!-- life score -->
-            <div>
+            <div class="flex justify-between w-3/4 ">
                 <button class="btn rounded-full text-white bg-[#360490] px-4">
                     Life
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" viewBox="0 0 30 22" fill="none">
@@ -100,9 +106,31 @@
         </div>
 
     </section>
-    <section class="score">
+    <!-- playground hidden -->
+
+    <!-- final result  -->
+
+    <section class="score flex justify-center items-center min-h-screen hidden ">
+        <div class="text-white text-center space-y-6 bg-[#ffffff33] p-4 rounded-lg ">
+            <h1 class="text-8xl">
+                <span class="font-extrabold">
+                    Score:
+                </span>
+                <span>
+                    14
+                </span>
+            </h1>
+            <button class="btn">
+                Play Again
+            </button>
+            <p>Practice will make you Pro</p>
+        </div>
         
     </section>
 </main>
+<script src="./asset/scripts/alhpa-clash.js">
+</script>
+<script src="./asset/scripts/utility.js">
+</script>
 </body>
 </html>
