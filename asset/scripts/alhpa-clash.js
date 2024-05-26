@@ -12,5 +12,19 @@
 function play(){
     hideElementById('home-screen');
     showElementById('play-ground');
+    continueGame();
 
 }
+
+function continueGame(){
+//generate a random alphabet 
+const alphabet = getARandomAlphabet();
+console.log('your jujutsu ALPHABET is ', alphabet);
+const currentAlphabetElement = document.getElementById('current-alphabet');
+currentAlphabetElement.innerText = alphabet;
+
+//set bg color
+setBackgroundColorById(alphabet)
+
+}
+
